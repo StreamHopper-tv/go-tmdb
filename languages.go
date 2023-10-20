@@ -17,10 +17,7 @@ type Language struct {
 // https://developers.themoviedb.org/3/configuration/languages
 func (tmdb *TMDb) GetLanguageList() (*Language, error) {
 	var languageList Language
-	uri := fmt.Sprintf("%s/configuration/languagest?api_key=%s", baseURL, tmdb.apiKey)
-	fmt.Printf("%s\n", uri)
-
+	uri := fmt.Sprintf("%s/configuration/languages?api_key=%s", baseURL, tmdb.apiKey)
 	result, err := getTmdb(uri, &languageList)
-	fmt.Printf("%+v\n", result)
 	return result.(*Language), err
 }
