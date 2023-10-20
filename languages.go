@@ -7,9 +7,9 @@ import (
 // Language struct
 type Language struct {
 	Languages []struct {
-		Iso6391     string
-		EnglishName string
-		Name        string
+		Iso6391     string `json:"iso_639_1"`
+		EnglishName string `json:"english_name"`
+		Name        string `json:"name"`
 	}
 }
 
