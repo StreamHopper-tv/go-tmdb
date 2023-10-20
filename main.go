@@ -11,7 +11,7 @@ import (
 
 const baseURL string = "https://api.themoviedb.org/3"
 
-const maxRequestPerSecond = 4
+const maxRequestPerSecond = 30
 
 var (
 	// hack: add some millisecond for don`t get 429 error
