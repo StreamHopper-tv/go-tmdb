@@ -18,6 +18,9 @@ type Language struct {
 func (tmdb *TMDb) GetLanguageList() (*Language, error) {
 	var languageList Language
 	uri := fmt.Sprintf("%s/configuration/languagest?api_key=%s", baseURL, tmdb.apiKey)
+	fmt.Printf("%s\n", uri)
+
 	result, err := getTmdb(uri, &languageList)
+	fmt.Printf("%+v\n", result)
 	return result.(*Language), err
 }
