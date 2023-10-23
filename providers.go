@@ -17,10 +17,10 @@ type ProviderResults struct {
 	Providers []Provider `json:"results"`
 }
 type Provider struct {
-	DisplayPriorities map[string]string `json:"display_priorities"`
-	LogoPath          string            `json:"logo_path"`
-	ProviderName      string            `json:"provider_name"`
-	ID                int               `json:"provider_id"`
+	DisplayPriorities map[string]int `json:"display_priorities"`
+	LogoPath          string         `json:"logo_path"`
+	ProviderName      string         `json:"provider_name"`
+	ID                int            `json:"provider_id"`
 }
 
 // GetRegionList from watch providers
